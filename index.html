@@ -40,9 +40,9 @@
       var userName = login();
 
       function login() {
-        let currenUserName = prompt("Username?", "");
-        socket.emit("login", { userName: currenUserName });
-        return currenUserName;
+        let currentUserName = prompt("Username?", "");
+        socket.emit("login", { userName: currentUserName });
+        return currentUserName;
       }
 
       form.addEventListener("submit", function (e) {
@@ -64,9 +64,25 @@
       socket.on("user connected", function (data) {
         for (key in data) {
           console.log(data[key]);
+          
+          dataUserName = data[key];
+
           var user = document.createElement("li");
-          user.textContent = data[key];
+          var iconUser = document.createElement("p");
+          var labelUser = document.createElement("p");
+
+          user.className = "itemUser";
+          iconUser.className = "iconUser";
+          labelUser.className = "labelUser";
+
+          iconUser.textContent = dataUserName[0];
+          labelUser.textContent = dataUserName;
+
+          user.appendChild(iconUser);
+          user.appendChild(labelUser);
+
           onlineUsers.appendChild(user);
+          
           window.scrollTo(0, document.body.scrollHeight);
         }
 
