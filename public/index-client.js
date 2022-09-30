@@ -6,12 +6,27 @@ var loginWrapper = document.getElementById("loginWrapper");
 var formLogin = document.getElementById("formLogin");
 var inputLogin = document.getElementById("inputLogin");
 
-
 var messages = document.getElementById("messages");
 var formMessage = document.getElementById("formMessage");
 var input = document.getElementById("inputMessage");
 
+var buttonListUsers = document.getElementById("buttonListUsers");
+var listUsers = document.getElementById("listUsers");
+var chat = document.getElementById("chat");
+
 var userName;
+
+buttonListUsers.addEventListener("click", function () {
+    if (buttonListUsers.classList.contains("active") && (window.innerWidth <= 980)) {
+        buttonListUsers.classList.remove("active")
+        chat.style.display = "flex";
+        listUsers.style.display = "none";
+    } else {
+        buttonListUsers.classList.add("active")
+        chat.style.display = "none";
+        listUsers.style.display = "block";
+    }
+});
 
 formLogin.addEventListener("submit", function (e) {
     e.preventDefault();

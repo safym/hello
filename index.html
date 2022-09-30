@@ -7,27 +7,15 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
   <link rel="stylesheet" href="style.css" />
-
-  <style>
-    .material-symbols-outlined {
-      font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
-    }
-
-    .material-symbols-outlined {
-      font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 48
-    }
-  </style>
 </head>
 
 <body>
-  <div id="loginWrapper">
 
+  <div id="loginWrapper">
     <form id="formLogin">
       <input id="inputLogin" autocomplete="off" placeholder="What is your name?" />
       <button id="login" type="submit">
@@ -36,9 +24,16 @@
         </span>
       </button>
     </form>
-
   </div>
-  <div class="header"></div>
+
+  <div id="header">
+    <button id="buttonListUsers">
+      <span class="material-symbols-outlined">
+        group
+      </span>
+    </button>
+  </div>
+
   <div id="wrapper">
     <div id="listUsers">
       <p class="labelOnline">Online:</p>
@@ -47,15 +42,14 @@
     <div id="chat">
       <ul id="messages">
         <li class="itemMessage">
-          <p class="userNameMessage">123</p>
+          <p class="userNameMessage">mayya</p>
           <p class="textMessage">
-            DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+            Всем привет в этом скромном чатике! Логиньтесь как хотите, пишите сообщения, смотрите кто в онлайне...
           </p>
         </li>
-
       </ul>
       <form id="formMessage" action="">
-        <input id="inputMessage" autocomplete="off"  placeholder="Write a message..."/>
+        <input id="inputMessage" autocomplete="off" placeholder="Write a message..." />
         <button><span class="material-symbols-outlined"> send </span></button>
       </form>
     </div>
